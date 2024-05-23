@@ -60,7 +60,7 @@
             // 
             // openFileDialog
             // 
-            this.openFileDialog.FileName = "openFileDialog1";
+            this.openFileDialog.FileName = ".txt";
             // 
             // buttonStartHash
             // 
@@ -187,7 +187,7 @@
             this.toolStripMenuItem1});
             this.toolStrip1.Location = new System.Drawing.Point(0, 0);
             this.toolStrip1.Name = "toolStrip1";
-            this.toolStrip1.Size = new System.Drawing.Size(1053, 25);
+            this.toolStrip1.Size = new System.Drawing.Size(1053, 31);
             this.toolStrip1.TabIndex = 7;
             this.toolStrip1.Text = "toolStrip1";
             // 

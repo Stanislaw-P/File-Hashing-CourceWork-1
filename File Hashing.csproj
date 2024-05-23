@@ -53,11 +53,23 @@
     <Compile Include="FormHashFile.Designer.cs">
       <DependentUpon>FormHashFile.cs</DependentUpon>
     </Compile>
+    <Compile Include="FormHashWord.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FormHashWord.Designer.cs">
+      <DependentUpon>FormHashWord.cs</DependentUpon>
+    </Compile>
     <Compile Include="FormMain.cs">
       <SubType>Form</SubType>
     </Compile>
     <Compile Include="FormMain.Designer.cs">
       <DependentUpon>FormMain.cs</DependentUpon>
+    </Compile>
+    <Compile Include="FormTestAlgo.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FormTestAlgo.Designer.cs">
+      <DependentUpon>FormTestAlgo.cs</DependentUpon>
     </Compile>
     <Compile Include="PolynomialHash.cs" />
     <Compile Include="Program.cs" />
@@ -65,8 +77,14 @@
     <EmbeddedResource Include="FormHashFile.resx">
       <DependentUpon>FormHashFile.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="FormHashWord.resx">
+      <DependentUpon>FormHashWord.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="FormMain.resx">
       <DependentUpon>FormMain.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FormTestAlgo.resx">
+      <DependentUpon>FormTestAlgo.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Properties\Resources.resx">
       <Generator>ResXFileCodeGenerator</Generator>

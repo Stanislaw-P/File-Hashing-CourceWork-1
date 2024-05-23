@@ -1,7 +1,6 @@
 ﻿using System;
 using System.Globalization;
 using System.IO;
-using System.Runtime.Remoting.Metadata.W3cXsd2001;
 
 namespace File_Hashing
 {
@@ -77,10 +76,10 @@ namespace File_Hashing
 
             for (int i = 0; i < hashSting.Length; i++)
             {
-                long tempNum = Int64.Parse(hashSting[i], NumberStyles.HexNumber);
+                long tempNum = string.IsNullOrEmpty(hashSting[i]) ? 0 : long.Parse(hashSting[i], NumberStyles.HexNumber);
                 result += tempNum;
             }
-            return result.ToString("X");
+            return result.ToString();
         }  
 
         /// <summary>

@@ -1,12 +1,5 @@
 ﻿using System;
-using System.Collections.Generic;
-using System.ComponentModel;
-using System.Data;
-using System.Drawing;
 using System.IO;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
 using System.Windows.Forms;
 
 namespace File_Hashing
@@ -16,7 +9,7 @@ namespace File_Hashing
         public FormMain()
         {
             InitializeComponent();
-            
+
             // Установка свойств окна открытия файла
             openFileDialog.Title = "Выбор файла";
             openFileDialog.Filter = "Text files(*.txt)|*.txt";
@@ -48,6 +41,35 @@ namespace File_Hashing
             textBoxSavePath.Text = fileName;
         }
 
+
+
+        // Запустить хеширование
+        private void buttonStartHash_Click(object sender, EventArgs e)
+        {
+            string pathForOpen = textBoxSelectedFile.Text;
+            string pathForSave = textBoxSavePath.Text;
+
+            // Проверка на корректность введенного или выбранного пути к файлу для чтения
+            if (Path.GetExtension(pathForOpen) != ".txt" || !File.Exists(pathForOpen))
+            {
+                MessageBox.Show("Указан неверный путь к файлу, либо имя файла!\nВыберите файл с расширением *.txt.", "Ошибка!", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                return;
+            }
+
+            // Проверка на корректность введенного или выбранного пути к файлу для сохранения данных
+            if (Path.GetExtension(pathForSave) != ".txt" )
+            {
+                MessageBox.Show("Вы не указали путь для сохранения результата\nВыберите файл с расширением *.txt.", "Ошибка!", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                return;
+            }
+
+
+            // Вызываем статический метод для хеширования данных в файле
+            PolynomialHash.HashTheFile(pathForOpen, pathForSave);
+            MessageBox.Show($"Хеширование выполнено!\n Файл с хешем сохранен в {pathForSave}", "Сообщение");
+            clearTextBoxes();
+        }
+
         // Очищение текст бокса файла для открытия
         private void buttonClearOpen_Click(object sender, EventArgs e)
         {
@@ -62,24 +84,6 @@ namespace File_Hashing
             textBoxSavePath.Focus();
         }
 
-        // Запустить хеширование
-        private void buttonStartHash_Click(object sender, EventArgs e)
-        {
-            string pathForOpen = textBoxSelectedFile.Text;
-            string pathForSave = textBoxSavePath.Text;
-
-            // Проверяем на корректность введеный или выбранный путь к файлу
-            if (!(Path.GetExtension(pathForOpen) == ".txt") || !File.Exists(pathForOpen))
-            {
-                MessageBox.Show("Указан неверный путь к файлу, либо имя файла!\nВыберите файл с расширением *.txt.", "Ошибка!", MessageBoxButtons.OK, MessageBoxIcon.Error) ;
-                return;
-            }
-
-            // Вызываем статический метод для хеширования данных в файле
-            PolynomialHash.HashTheFile(pathForOpen, pathForSave);
-            MessageBox.Show($"Хеширование выполнено!\n Файл с хешем сохранен в {pathForSave}", "Сообщение");
-            clearTextBoxes();
-        }
 
         // Очистить текст боксы
         private void clearTextBoxes()
@@ -97,12 +101,14 @@ namespace File_Hashing
 
         private void toolStripMenuItemHashWord_Click(object sender, EventArgs e)
         {
-
+            FormHashWord formHashWord = new FormHashWord();
+            formHashWord.Show();
         }
 
         private void toolStripMenuItemTest_Click(object sender, EventArgs e)
         {
-
+            FormTestAlgo formTestAlgo = new FormTestAlgo();
+            formTestAlgo.Show();
         }
     }
 }

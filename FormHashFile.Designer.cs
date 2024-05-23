@@ -34,6 +34,8 @@
             this.buttonOpen = new System.Windows.Forms.Button();
             this.openFileDialog = new System.Windows.Forms.OpenFileDialog();
             this.buttonStartHash = new System.Windows.Forms.Button();
+            this.label2 = new System.Windows.Forms.Label();
+            this.labelHashSum = new System.Windows.Forms.Label();
             this.SuspendLayout();
             // 
             // buttonClearOpen
@@ -42,7 +44,7 @@
             this.buttonClearOpen.Location = new System.Drawing.Point(826, 42);
             this.buttonClearOpen.Name = "buttonClearOpen";
             this.buttonClearOpen.Size = new System.Drawing.Size(115, 40);
-            this.buttonClearOpen.TabIndex = 9;
+            this.buttonClearOpen.TabIndex = 3;
             this.buttonClearOpen.Text = "Очистить";
             this.buttonClearOpen.UseVisualStyleBackColor = true;
             this.buttonClearOpen.Click += new System.EventHandler(this.buttonClearOpen_Click);
@@ -64,7 +66,7 @@
             this.textBoxSelectedFile.Multiline = true;
             this.textBoxSelectedFile.Name = "textBoxSelectedFile";
             this.textBoxSelectedFile.Size = new System.Drawing.Size(492, 40);
-            this.textBoxSelectedFile.TabIndex = 6;
+            this.textBoxSelectedFile.TabIndex = 0;
             // 
             // buttonOpen
             // 
@@ -72,14 +74,14 @@
             this.buttonOpen.Location = new System.Drawing.Point(705, 42);
             this.buttonOpen.Name = "buttonOpen";
             this.buttonOpen.Size = new System.Drawing.Size(115, 40);
-            this.buttonOpen.TabIndex = 7;
+            this.buttonOpen.TabIndex = 1;
             this.buttonOpen.Text = "Обзор";
             this.buttonOpen.UseVisualStyleBackColor = true;
             this.buttonOpen.Click += new System.EventHandler(this.buttonOpen_Click);
             // 
             // openFileDialog
             // 
-            this.openFileDialog.FileName = "openFileDialog1";
+            this.openFileDialog.FileName = ".txt";
             // 
             // buttonStartHash
             // 
@@ -87,21 +89,43 @@
             this.buttonStartHash.Location = new System.Drawing.Point(705, 110);
             this.buttonStartHash.Name = "buttonStartHash";
             this.buttonStartHash.Size = new System.Drawing.Size(236, 40);
-            this.buttonStartHash.TabIndex = 10;
+            this.buttonStartHash.TabIndex = 2;
             this.buttonStartHash.Text = "Получить хеш сумму файла";
             this.buttonStartHash.UseVisualStyleBackColor = true;
             this.buttonStartHash.Click += new System.EventHandler(this.buttonStartHash_Click);
+            // 
+            // label2
+            // 
+            this.label2.AutoSize = true;
+            this.label2.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
+            this.label2.Location = new System.Drawing.Point(56, 114);
+            this.label2.Name = "label2";
+            this.label2.Size = new System.Drawing.Size(261, 28);
+            this.label2.TabIndex = 9;
+            this.label2.Text = "Контрольная сумма файла:";
+            // 
+            // labelHashSum
+            // 
+            this.labelHashSum.AutoSize = true;
+            this.labelHashSum.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
+            this.labelHashSum.Location = new System.Drawing.Point(323, 114);
+            this.labelHashSum.Name = "labelHashSum";
+            this.labelHashSum.Size = new System.Drawing.Size(0, 28);
+            this.labelHashSum.TabIndex = 10;
             // 
             // FormHashFile
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(1053, 437);
+            this.Controls.Add(this.labelHashSum);
+            this.Controls.Add(this.label2);
             this.Controls.Add(this.buttonStartHash);
             this.Controls.Add(this.buttonClearOpen);
             this.Controls.Add(this.label1);
             this.Controls.Add(this.textBoxSelectedFile);
             this.Controls.Add(this.buttonOpen);
+            this.MaximumSize = new System.Drawing.Size(1075, 485);
             this.Name = "FormHashFile";
             this.Text = "Хеш сумма файла";
             this.ResumeLayout(false);
@@ -117,5 +141,7 @@
         private System.Windows.Forms.Button buttonOpen;
         private System.Windows.Forms.OpenFileDialog openFileDialog;
         private System.Windows.Forms.Button buttonStartHash;
+        private System.Windows.Forms.Label label2;
+        private System.Windows.Forms.Label labelHashSum;
     }
 }

@@ -1,12 +1,5 @@
 ﻿using System;
-using System.Collections.Generic;
-using System.ComponentModel;
-using System.Data;
-using System.Drawing;
 using System.IO;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
 using System.Windows.Forms;
 
 namespace File_Hashing
@@ -37,6 +30,7 @@ namespace File_Hashing
         {
             textBoxSelectedFile.Clear();
             textBoxSelectedFile.Focus();
+            labelHashSum.Text = null;
         }
 
         private void buttonStartHash_Click(object sender, EventArgs e)
@@ -52,6 +46,7 @@ namespace File_Hashing
 
             // Вызываем статический метод получения хеш суммы файла в 16-ти ричной системе
             string hashSumFile = PolynomialHash.HashTheFile(pathForOpen);
+            labelHashSum.Text = hashSumFile;
             MessageBox.Show($"Хеширование выполнено!\n Хеш сумма файла: {hashSumFile}", "Сообщение");
         }
     }
