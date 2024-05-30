@@ -19,6 +19,7 @@ namespace File_Hashing
             if (string.IsNullOrEmpty(input))
                 return null;
 
+            input = input.PadLeft(16, '!');
             long hash = 0;
             long[] pows = _getPows(input);
 

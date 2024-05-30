@@ -13,6 +13,8 @@ namespace File_Hashing
             // Установка свойств окна открытия файла
             openFileDialog.Title = "Выбор файла";
             openFileDialog.Filter = "Text files(*.txt)|*.txt";
+            // Тут нужно сделать открытие папки проекта для открытия папки по умолчанию
+
 
             // Установка свойств окна сохранения файла
             saveFileDialog.Title = "Выбор папки для сохранения";
@@ -109,6 +111,12 @@ namespace File_Hashing
         {
             FormTestAlgo formTestAlgo = new FormTestAlgo();
             formTestAlgo.Show();
+        }
+
+        private void buttonInfo_Click(object sender, EventArgs e)
+        {
+            FormInfo formInfo = new FormInfo();
+            formInfo.Show();
         }
     }
 }

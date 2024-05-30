@@ -30,6 +30,8 @@ namespace File_Hashing
             string word = textBoxGetWord.Text;
             string resultHashWord = PolynomialHash.ComputeHash(word);
             labelHashWord.Text = resultHashWord;
+            string result = $"Слово: {word}  |  Хеш: {resultHashWord}";
+            listBoxHistory.Items.Add(result);
             MessageBox.Show($"Хеширование выполнено!\n Хеш сумма слова: {resultHashWord}", "Сообщение");
         }
     }

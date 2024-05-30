@@ -44,6 +44,7 @@
             this.toolStripMenuItemHashWord = new System.Windows.Forms.ToolStripMenuItem();
             this.toolStripMenuItemTest = new System.Windows.Forms.ToolStripMenuItem();
             this.toolStrip1 = new System.Windows.Forms.ToolStrip();
+            this.buttonInfo = new System.Windows.Forms.Button();
             this.toolStrip1.SuspendLayout();
             this.SuspendLayout();
             // 
@@ -64,13 +65,14 @@
             // 
             // buttonStartHash
             // 
+            this.buttonStartHash.BackColor = System.Drawing.SystemColors.ActiveCaption;
             this.buttonStartHash.Font = new System.Drawing.Font("Segoe UI", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
-            this.buttonStartHash.Location = new System.Drawing.Point(705, 267);
+            this.buttonStartHash.Location = new System.Drawing.Point(705, 198);
             this.buttonStartHash.Name = "buttonStartHash";
             this.buttonStartHash.Size = new System.Drawing.Size(236, 40);
             this.buttonStartHash.TabIndex = 4;
             this.buttonStartHash.Text = "Хешировать файл";
-            this.buttonStartHash.UseVisualStyleBackColor = true;
+            this.buttonStartHash.UseVisualStyleBackColor = false;
             this.buttonStartHash.Click += new System.EventHandler(this.buttonStartHash_Click);
             // 
             // textBoxSelectedFile
@@ -86,7 +88,7 @@
             // 
             this.label1.AutoSize = true;
             this.label1.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
-            this.label1.Location = new System.Drawing.Point(56, 46);
+            this.label1.Location = new System.Drawing.Point(44, 46);
             this.label1.Name = "label1";
             this.label1.Size = new System.Drawing.Size(145, 28);
             this.label1.TabIndex = 3;
@@ -107,7 +109,7 @@
             // 
             this.label2.AutoSize = true;
             this.label2.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
-            this.label2.Location = new System.Drawing.Point(72, 186);
+            this.label2.Location = new System.Drawing.Point(60, 124);
             this.label2.Name = "label2";
             this.label2.Size = new System.Drawing.Size(129, 28);
             this.label2.TabIndex = 6;
@@ -116,7 +118,7 @@
             // textBoxSavePath
             // 
             this.textBoxSavePath.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
-            this.textBoxSavePath.Location = new System.Drawing.Point(207, 182);
+            this.textBoxSavePath.Location = new System.Drawing.Point(207, 120);
             this.textBoxSavePath.Multiline = true;
             this.textBoxSavePath.Name = "textBoxSavePath";
             this.textBoxSavePath.Size = new System.Drawing.Size(492, 40);
@@ -125,7 +127,7 @@
             // buttonClearSave
             // 
             this.buttonClearSave.Font = new System.Drawing.Font("Segoe UI", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
-            this.buttonClearSave.Location = new System.Drawing.Point(826, 182);
+            this.buttonClearSave.Location = new System.Drawing.Point(826, 120);
             this.buttonClearSave.Name = "buttonClearSave";
             this.buttonClearSave.Size = new System.Drawing.Size(115, 40);
             this.buttonClearSave.TabIndex = 6;
@@ -136,7 +138,7 @@
             // buttonSave
             // 
             this.buttonSave.Font = new System.Drawing.Font("Segoe UI", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
-            this.buttonSave.Location = new System.Drawing.Point(705, 182);
+            this.buttonSave.Location = new System.Drawing.Point(705, 120);
             this.buttonSave.Name = "buttonSave";
             this.buttonSave.Size = new System.Drawing.Size(115, 40);
             this.buttonSave.TabIndex = 3;
@@ -155,7 +157,7 @@
             this.toolStripMenuItemHashWord,
             this.toolStripMenuItemTest});
             this.toolStripMenuItem1.Name = "toolStripMenuItem1";
-            this.toolStripMenuItem1.Size = new System.Drawing.Size(134, 31);
+            this.toolStripMenuItem1.Size = new System.Drawing.Size(134, 25);
             this.toolStripMenuItem1.Text = "Дополнительно";
             // 
             // toolStripMenuItemHashSumFile
@@ -187,15 +189,27 @@
             this.toolStripMenuItem1});
             this.toolStrip1.Location = new System.Drawing.Point(0, 0);
             this.toolStrip1.Name = "toolStrip1";
-            this.toolStrip1.Size = new System.Drawing.Size(1053, 31);
+            this.toolStrip1.Size = new System.Drawing.Size(1053, 25);
             this.toolStrip1.TabIndex = 7;
             this.toolStrip1.Text = "toolStrip1";
+            // 
+            // buttonInfo
+            // 
+            this.buttonInfo.Font = new System.Drawing.Font("Segoe UI", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
+            this.buttonInfo.Location = new System.Drawing.Point(12, 395);
+            this.buttonInfo.Name = "buttonInfo";
+            this.buttonInfo.Size = new System.Drawing.Size(127, 30);
+            this.buttonInfo.TabIndex = 8;
+            this.buttonInfo.Text = "Информация";
+            this.buttonInfo.UseVisualStyleBackColor = true;
+            this.buttonInfo.Click += new System.EventHandler(this.buttonInfo_Click);
             // 
             // FormMain
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(1053, 437);
+            this.Controls.Add(this.buttonInfo);
             this.Controls.Add(this.toolStrip1);
             this.Controls.Add(this.buttonClearSave);
             this.Controls.Add(this.buttonSave);
@@ -233,6 +247,7 @@
         private System.Windows.Forms.ToolStrip toolStrip1;
         private System.Windows.Forms.ToolStripMenuItem toolStripMenuItemHashWord;
         private System.Windows.Forms.ToolStripMenuItem toolStripMenuItemTest;
+        private System.Windows.Forms.Button buttonInfo;
     }
 }
 

@@ -34,6 +34,7 @@
             this.label1 = new System.Windows.Forms.Label();
             this.label2 = new System.Windows.Forms.Label();
             this.labelHashWord = new System.Windows.Forms.Label();
+            this.listBoxHistory = new System.Windows.Forms.ListBox();
             this.SuspendLayout();
             // 
             // textBoxGetWord
@@ -96,11 +97,21 @@
             this.labelHashWord.Size = new System.Drawing.Size(0, 28);
             this.labelHashWord.TabIndex = 11;
             // 
+            // listBoxHistory
+            // 
+            this.listBoxHistory.FormattingEnabled = true;
+            this.listBoxHistory.ItemHeight = 16;
+            this.listBoxHistory.Location = new System.Drawing.Point(207, 200);
+            this.listBoxHistory.Name = "listBoxHistory";
+            this.listBoxHistory.Size = new System.Drawing.Size(491, 228);
+            this.listBoxHistory.TabIndex = 12;
+            // 
             // FormHashWord
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(1053, 437);
+            this.Controls.Add(this.listBoxHistory);
             this.Controls.Add(this.labelHashWord);
             this.Controls.Add(this.label2);
             this.Controls.Add(this.label1);
@@ -122,5 +133,6 @@
         private System.Windows.Forms.Label label1;
         private System.Windows.Forms.Label label2;
         private System.Windows.Forms.Label labelHashWord;
+        private System.Windows.Forms.ListBox listBoxHistory;
     }
 }
