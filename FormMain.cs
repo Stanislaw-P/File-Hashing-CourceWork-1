@@ -69,7 +69,7 @@ namespace File_Hashing
             // Вызываем статический метод для хеширования данных в файле
             PolynomialHash.HashTheFile(pathForOpen, pathForSave);
             MessageBox.Show($"Хеширование выполнено!\n Файл с хешем сохранен в {pathForSave}", "Сообщение");
-            clearTextBoxes();
+         
         }
 
         // Очищение текст бокса файла для открытия
@@ -84,15 +84,6 @@ namespace File_Hashing
         {
             textBoxSavePath.Clear();
             textBoxSavePath.Focus();
-        }
-
-
-        // Очистить текст боксы
-        private void clearTextBoxes()
-        {
-            textBoxSelectedFile.Clear();
-            textBoxSelectedFile.Focus();
-            textBoxSavePath.Clear();
         }
 
         private void toolStripMenuItemHashSumFile_Click(object sender, EventArgs e)
