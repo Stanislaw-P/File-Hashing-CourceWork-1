@@ -19,18 +19,19 @@ namespace File_Hashing
             if (string.IsNullOrEmpty(input))
                 return null;
 
-            input = input.PadLeft(16, '!');
+            //input = input.PadLeft(16, '!');
             long hash = 0;
             long[] pows = _getPows(input);
-
-            //input = Regex.Replace(input, "[-.?!)(,:]", "");
 
             for (int i = 0; i < input.Length; i++)
             {
                 char c = input[i];
                 hash = (hash + (c - '!' + 1) * pows[i]) % mod;
             }
-            return hash.ToString("X");
+            string result = hash.ToString("X");
+            if (result.Length < 8)
+                result = ComputeHash(result);
+            return result;
         }
 
         /// <summary>
@@ -81,7 +82,7 @@ namespace File_Hashing
                 result += tempNum;
             }
             return result.ToString();
-        }  
+        }
 
         /// <summary>
         /// Создает массив со степенями константы p от p^0 до p^n
