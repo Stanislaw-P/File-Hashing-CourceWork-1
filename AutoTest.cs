@@ -10,6 +10,7 @@ namespace File_Hashing
         private string _chars = "1234567980qwertyuiopasdfghjklzxcvbnmQWERTYUIOPASDFGHJKLZXCVBNMйцукенгшщзхъфывапролджэячсмитьбюЙЦУКЕНГШЩЗХЪФЫВАПРОЛДЖЭЯЧСМИТЬБЮ";
         private static Random rnd = new Random();
 
+        
         private string _genearationString()
         {
             StringBuilder str = new StringBuilder();

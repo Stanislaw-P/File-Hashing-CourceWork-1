@@ -7,7 +7,7 @@ namespace File_Hashing
     public class PolynomialHash
     {
         private const int p = 51;
-        private const int mod = 1000000007;
+        private const int mod = 1000000123;
 
         /// <summary>
         /// Основная хеш-функция, хеширует строку
@@ -19,7 +19,7 @@ namespace File_Hashing
             if (string.IsNullOrEmpty(input))
                 return null;
 
-            //input = input.PadLeft(16, '!');
+
             long hash = 0;
             long[] pows = _getPows(input);
 
