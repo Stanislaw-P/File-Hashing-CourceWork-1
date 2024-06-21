@@ -106,7 +106,7 @@ namespace File_Hashing
                         if (arrayString[i] != arrayString[j] && i <= j)
                         {
                             // Сохранение сообщения в лист где хранятся повторы
-                            listRepeat.Add($"Коллизия! (I): {i} {arrayHash[i]} ({arrayString[i]}) (J): {j} {arrayHash[j]} ({arrayString[j]})");
+                            listRepeat.Add($"Коллизия! (I): {i} {arrayHash[i]} ({arrayString[i]})\t (J): {j} {arrayHash[j]} ({arrayString[j]})\n");
                             countCollisions++;
                         }
                 }

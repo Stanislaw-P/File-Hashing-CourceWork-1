@@ -2,6 +2,7 @@
 using System.Globalization;
 using System.IO;
 
+
 namespace File_Hashing
 {
     public class PolynomialHash
@@ -19,7 +20,6 @@ namespace File_Hashing
             if (string.IsNullOrEmpty(input))
                 return null;
 
-
             long hash = 0;
             long[] pows = _getPows(input);
 
@@ -31,6 +31,7 @@ namespace File_Hashing
             string result = hash.ToString("X");
             if (result.Length < 8)
                 result = ComputeHash(result);
+
             return result;
         }
 
